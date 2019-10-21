@@ -36,7 +36,7 @@ class Modal extends Component {
     let data={name:this.refs.cpDev2.value}
     e.preventDefault();
     this.props.namechange(this.refs.cpDev2.value);
-    await fetch("http://localhost:4000/add?nom=join:"+this.refs.cpDev2.value, {
+    await fetch("https://servergame1.herokuapp.com/add?nom=join:"+this.refs.cpDev2.value, {
       method: 'GET',
       mode: 'cors',
       headers: new Headers({

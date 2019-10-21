@@ -7,7 +7,7 @@ import openSocket from 'socket.io-client'
 const $ = window.$;
 const fs = require('fs');
 // const socket = openSocket("http://desktop-4k5e3lr:4000");
-const socket = openSocket("127.0.0.1:4000");
+const socket = openSocket("https://servergame1.herokuapp.com");
 class App extends Component {
   state = {
     utilisateur: "",
@@ -56,7 +56,7 @@ class App extends Component {
         <div class="speaker"></div> <span>Music</span>
 
         <audio id="player">
-          <source src="http://localhost:3000/music.mp3" type="audio/mp3" />
+          <source src="https://servergame1.herokuapp.com/music.mp3" type="audio/mp3" />
         </audio>
         <audio className="audio-element">
           <source src="https://api.coderrocketfuel.com/assets/pomodoro-times-up.mp3"></source>
