@@ -122,7 +122,7 @@ class Game extends Component {
                     nbrdata_me: [...this.state.nbrdata_me, data.nbr],
                     role: this.state.role * -1
                 });
-                this.corecteur(data.nbr, data.utilisateur);
+                this.corecteur(data.nbr,this.props.vsnbr, data.utilisateur);
 
             }
             else {
@@ -130,18 +130,21 @@ class Game extends Component {
                     nbrdata_vs: [...this.state.nbrdata_vs, data.nbr],
                     role: this.state.role * -1
                 });
-                this.corecteur(data.nbr, data.utilisateur);
+                this.corecteur(data.nbr,this.props.mynbr, data.utilisateur);
             }
         });
     }
 
-    corecteur = (tab, utilisateur) => {
-        var crr = [];
-        for (let i = 0; i < this.props.vsnbr.length; i++) {
+    corecteur = (tab,com, utilisateur) => {
+        alert(tab
+            +"\n"+"comapare"+com);
+      
+        var crr = [];  
+         for (let i = 0; i < com.length; i++) {
             for (let j = 0; j < tab.length; j++) {
-                if (this.props.vsnbr[i] === tab[j]) {
+                if (com[i] === tab[j]) {
                     if (i === j) {
-                        crr[i] = "V";; break;
+                        crr[i] = "V"; break;
                     }
                     else { crr[i] = "R"; break; }
                 }

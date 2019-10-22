@@ -34,7 +34,9 @@ class App extends Component {
       this.setState({ roomList: data })
     });
     socket.on('getvsnember', (data) => {
+      alert("get number")
       if (data.nbrvs.length > 0 && data.utilisateur !== this.state.utilisateur) {
+        alert(data.nbrvs[0]+" "+data.nbrvs[1]+' '+data.nbrvs[2]+''+data.nbrvs[3])
         this.setState({ vsnbr: data.nbrvs });
       }
     });

@@ -20,7 +20,7 @@ class Prinipale extends Component {
                 <audio className="audio-element">
                     <source src="http://localhost:3000/music.mp3"></source>
                 </audio>
-                {this.state.Nbr.length === 4 ? <Game vsnbr={this.props.vsnbr} role={this.props.role} room={this.props.room} vs_palyer={this.props.vs_palyer} utilisateur={this.props.utilisateur} players={this.props.players} socket={this.state.socket} /> : <Nbr socket={this.state.socket} setnbr={this.props.setnbr} setnbr0={this.setnbr0} />}
+                {this.state.Nbr.length === 4 ? <Game  mynbr={this.props.mynbr} vsnbr={this.props.vsnbr} role={this.props.role} room={this.props.room} vs_palyer={this.props.vs_palyer} utilisateur={this.props.utilisateur} players={this.props.players} socket={this.state.socket} /> : <Nbr socket={this.state.socket} setnbr={this.props.setnbr} setnbr0={this.setnbr0} />}
             </div>
         );
 

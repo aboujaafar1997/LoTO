@@ -2,34 +2,6 @@
 const cacheName = 'v3';
 
 const cacheAssets = [
-  // './gestion_pointagee/ajouterpointage.js',
-  // './gestion_pointagee/principale.js',
-  // './gestion_pointagee/listepointage.js',
-  // './gestion_chauffeur/ajouterchauffeur.js',
-  // './gestion_pointagee/principale.js',
-  // './gestion_pointagee/listechauffeur.js',
-  // './gestion_privs/ajouterprivs.js',
-  // './gestion_privs/principale.js',
-  // './gestion_privs/listeprivs.js',
-  // './gestion_Profil/ajouterprofil.js',
-  // './gestion_Profil/principale.js',
-  // './gestion_Profil/listeprofil.js',
-
-  'C:/Users/toshiba/Desktop/final/pnp/public/index.html',
-  'C:/Users/toshiba/Desktop/final/pnp/public/custom-service-worker.js',
-  'C:/Users/toshiba/Desktop/final/pnp/public/manifest.json',
-  'C:/Users/toshiba/Desktop/final/pnp/public/final.png',  
-  'C:/Users/toshiba/Desktop/final/pnp/public/icon.png',
-  'C:/Users/toshiba/Desktop/final/pnp/public/icon.ico',  
-  'C:/Users/toshiba/Desktop/final/pnp/src/App.js',
-  'C:/Users/toshiba/Desktop/final/pnp/src/index.css',
-  'C:/Users/toshiba/Desktop/final/pnp/src/index.js',
-  'C:/Users/toshiba/Desktop/final/pnp/src/Navbar.js',
-  'C:/Users/toshiba/Desktop/final/pnp/src/logo.png',
-  'C:/Users/toshiba/Desktop/final/pnp/src/serviceWorker.js',
-  'C:/Users/toshiba/Desktop/final/pnp/src/Login.js'
-
-  
 ];
 
 // Call Install Event
@@ -83,41 +55,21 @@ self.addEventListener('activate', (e) => {
         clients.claim();
       }
     });
-    //mon code ////////////////////////////////////////////
-	/////////////////////////////////////////////////////
-	////////////////////////////////////////////////
-	///////////////////////////////////////////////
-	//////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////
+    
+    // self.addEventListener('sync', function(event) {
+      //   console.log('firing: sync');
+      //   if (event.tag == 'image-fetch') {
+        //     console.log('sync event fired');
+        //     event.waitUntil(fetchDogImage());
+        //   }
+        // });
         
-       var syncStore = [];
+        var syncStore = [];
        var token="";
        
         function fetch0()
         {
 
-
- setTimeout(function() {
-  
-  fetch("http://localhost:8080/api/Pointage/ajouter/tab", {
-    method: 'POST',
-    headers: new Headers({
-        'Content-Type': 'application/json','Authorization': 'bearer '+token
-    }),
-    body: JSON.stringify(syncStore)
-})
-    .then(function(data) {
-      console.log('Request successful', data);
-      console.log("sync.......")
-      console.log(syncStore)
-      syncStore=[];
-    })
-    .catch(function(error) {
-      console.log("Request failed vous ete online mais l'ereur de serveur", error);
-      alert("Request failed vous ete online mais l'ereur de serveur", error);
-    });
-}, 2000);
   
 }
 
@@ -130,11 +82,10 @@ self.addEventListener('message', event => {
       }
   
 })
-// self.addEventListener('sync', event => {
+self.addEventListener('sync', event => {
 
-  event.waitUntil(fetch0())
+  event.waitUntil()
  console.log(syncStore)
-
 
   
 })

@@ -26,7 +26,6 @@ var server = app.listen(port, function () {
   console.log("run server in port : " + port);
 });
 app.get("/data", function (req,res) {
-  var txt;
   fs.readFile('Output.txt', 'utf8', function(err, data) {
       res.send(data);
   });   
