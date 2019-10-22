@@ -136,9 +136,6 @@ class Game extends Component {
     }
 
     corecteur = (tab,com, utilisateur) => {
-        alert(tab
-            +"\n"+"comapare"+com);
-      
         var crr = [];  
          for (let i = 0; i < com.length; i++) {
             for (let j = 0; j < tab.length; j++) {
