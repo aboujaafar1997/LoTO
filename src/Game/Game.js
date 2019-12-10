@@ -146,7 +146,7 @@ class Game extends Component {
                     else { crr[i] = "R"; break; }
                 }
                 else {
-
+                    
                     if (j == 3) {
                         crr[i] = 'F';
                     }
