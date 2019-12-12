@@ -1,3 +1,6 @@
+## Pour démarer le jeux en local il faut demarer le serveur server.js avec la commande :
+### ` node server.js`
+## dev mode
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
